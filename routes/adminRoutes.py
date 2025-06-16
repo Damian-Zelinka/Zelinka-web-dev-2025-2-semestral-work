@@ -8,7 +8,7 @@ admin_bp = Blueprint('admin', __name__)
 
 @admin_bp.route("/delete_comment", methods=["DELETE"])
 @admin_required
-def delete_comment():
+def delete_comment(user_id):
     try:
         data = request.get_json()
         comment_id = data.get("comment_id")
@@ -31,7 +31,7 @@ def delete_comment():
 
 @admin_bp.route("/delete_landmark", methods=["DELETE"])
 @admin_required
-def delete_landmark():
+def delete_landmark(user_id):
     try:
         data = request.get_json()
         landmark_id = data.get("landmark_id")
