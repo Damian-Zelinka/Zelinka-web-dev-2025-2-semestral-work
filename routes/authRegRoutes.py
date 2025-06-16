@@ -82,7 +82,7 @@ def login():
 @auth_bp.route("/logout", methods=["POST"])
 def logout():
     response = make_response(jsonify({"message": "Logged out"}))
-    response.set_cookie("access_token", "", expires=datetime.utcnow() - timedelta(days=1), httponly=True, secure=True, samesite="None")
+    response.set_cookie("access_token", "", expires=0, httponly=True, secure=True, samesite="None")
     return response
 
 
