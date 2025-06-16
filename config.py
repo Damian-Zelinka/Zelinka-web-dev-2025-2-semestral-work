@@ -8,7 +8,7 @@ from extensions import db, migrate
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app, supports_credentials=True, origins=["http://localhost:5173"])
+CORS(app, supports_credentials=True, origins=["https://damian-zelinka.github.io"])
 
 app.secret_key = os.getenv("SECRET_KEY")
 
